@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+echo "-----&gt; Installing Mysql 5.1"
+cd $1
+wget https://raw.githubusercontent.com/gaumire/mysql-binary/master/mysql.tar.gz
+# make a directory to untar (like unzip) the binary
+mkdir -p vendor/mysql
+# untar the binary to the directory we want
+tar -C vendor/mysql -xvf mysql.tar.gz
