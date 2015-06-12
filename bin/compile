@@ -6,3 +6,7 @@ wget https://raw.githubusercontent.com/gaumire/mysql-binary/master/mysql.tar.gz
 mkdir -p vendor/mysql
 # untar the binary to the directory we want
 tar -C vendor/mysql -xvf mysql.tar.gz
+# remove the tar file
+rm -f mysql.tar.gz
+# add library path
+export LD_LIBRARY_PATH=/app/vendor/mysql/lib/mysql/
