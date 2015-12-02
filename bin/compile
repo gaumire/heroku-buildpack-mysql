@@ -14,3 +14,9 @@ mkdir -p $BUILD_DIR/.heroku/vendor/mysql
 tar -C $BUILD_DIR/.heroku/vendor/mysql -xvf mysql.tar.gz
 # remove the tar file
 rm -f mysql.tar.gz
+
+#setting path
+export PATH="$PATH:/app/.heroku/vendor/mysql/bin":$PATH
+
+### Load dependencies
+source $BUILD_DIR/app/.heroku/vendor/mysql/lib/*
